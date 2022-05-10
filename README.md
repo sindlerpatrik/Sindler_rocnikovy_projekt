@@ -1,2 +1,2 @@
-# Sindler_rocnikovy_projekt
+# Šindler-ročníkový projekt
 Ročníkový projekt
