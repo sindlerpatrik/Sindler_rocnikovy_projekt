@@ -10,51 +10,51 @@ ATOM matrix jsem použil pro měření pokojové teploty a tlaku pomocí senzoru
 
 >Blynk stáhneme buď na Google Play nebo App Store
 
-<img src="./blynk/blynk1.jpg" width="250" height="540"></img> 
+<img src="./images/blynk1.jpg" width="250" height="540"></img> 
 
 >Po stažení a registraci klikneme na tlačítko pro vytvoření nového projektu
 
-<img src="./blynk/blynk13.jpg" width="250" height="540"></img>
+<img src="./images/blynk13.jpg" width="250" height="540"></img>
 
 >Projekt si pojmenujeme
 
-<img src="./blynk/blynk2.jpg" width="250" height="540"></img> 
+<img src="./images/blynk2.jpg" width="250" height="540"></img> 
 
 >Vybereme zařízení, v tomto případě to bude **ESP32 Dev Board**
 
-<img src="./blynk/blynk3.jpg" width="250" height="540"></img>
+<img src="./images/blynk3.jpg" width="250" height="540"></img>
 
 >Jako typ připojení zvolíme WiFi a vytvoříme projekt
 
-<img src="./blynk/blynk4.jpg" width="250" height="540"></img>
+<img src="./images/blynk4.jpg" width="250" height="540"></img>
 
 >V novém projektu klikneme na tlačíkto por přidání widgetů
 
-<img src="./blynk/blynk6.jpg" width="250" height="540"></img>
+<img src="./images/blynk6.jpg" width="250" height="540"></img>
 
 >Pro zobrazení hodnot pomocí grafu zvolíme SuperChat
 
-<img src="./blynk/blynk7.jpg" width="250" height="540"></img>
+<img src="./images/blynk7.jpg" width="250" height="540"></img>
 
 >Po zvolení widgetu klineme na tlačítko pro úpravy 
 
-<img src="./blynk/blynk8.jpg" width="250" height="540"></img>
+<img src="./images/blynk8.jpg" width="250" height="540"></img>
 
 >Do grafu přídáme proměnné, které cheme aby se zobrazovaly
 
-<img src="./blynk/blynk9.jpg" width="250" height="540"></img>
+<img src="./images/blynk9.jpg" width="250" height="540"></img>
 
 >Proměnné si pojmenujeme a klikneme na tlačítko pro jejich úpravu
 
-<img src="./blynk/blynk10.jpg" width="250" height="540"></img>
+<img src="./images/blynk10.jpg" width="250" height="540"></img>
 
 >Klikneme na tlačítko pro přidělelní pinu
 
-<img src="./blynk/blynk11.jpg" width="250" height="540"></img>
+<img src="./images/blynk11.jpg" width="250" height="540"></img>
 
 >Vybereme virtuální pin 4, u druhé proměnné vybereme pin 5, tímto krokem je Blynk setup hotov
 
-<img src="./blynk/blynk12.jpg" width="250" height="540"></img>
+<img src="./images/blynk12.jpg" width="250" height="540"></img>
 
 ### Arduino setup
 
