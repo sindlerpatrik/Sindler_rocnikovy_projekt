@@ -5,3 +5,13 @@ Obě části projektu byly programovány v [Arduino IDE](https://www.arduino.cc/
 
 ## M5Stack ATOM Matrix
 ATOM matrix jsem použil pro měření pokojové teploty a tlaku pomocí senzoru [BMP 280](https://www.laskakit.cz/arduino-senzor-barometrickeho-tlaku-a-teploty-bmp280/). Výsledky měření se poté zobrazovaly na webové stránce a také v aplikaci blynk pomocí grafů.
+
+### Blynk setup
+
+>Blynk stáhneme buď na Google Play nebo App Store
+
+<img src="./blynk/blynk1.jpg" width="250" height="540"></img> 
+
+>Po stažení a registraci
+
+<img src="./blynk/blynk2.jpg" width="250" height="540"></img> 
