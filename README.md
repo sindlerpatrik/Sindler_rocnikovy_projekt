@@ -59,3 +59,5 @@ ATOM matrix jsem použil pro měření pokojové teploty a tlaku pomocí senzoru
 ### Arduino setup
 
 >V Arduino IDE klikeneme na Soubor>Vlastnosti
+
+<img src="./images/img1.JPG"></img>
