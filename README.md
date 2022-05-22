@@ -92,4 +92,8 @@ Poté ze složky **Atom_Server** zkopírujeme kód, přepíšeme potřebné prom
 
 Po nahrání kódu se v aplikaci Blynk začnou vykreslovat grafy
 
+<img src="./images/Img8.jpg" width="250" height="540"></img>
+
 Pro zobrazení webové stránky musíme do vyhledávání prohlížeče vložit IP adresu, kterou Atom Matrix získá po připojení k WiFi a vypíše ji na sériový monitor(v Arduino IDE v pravém horním rohu)
+
+<img src="./images/Img9.jpg"></img>
