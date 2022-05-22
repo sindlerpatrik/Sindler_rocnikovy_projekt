@@ -28,7 +28,7 @@ ATOM matrix jsem použil pro měření pokojové teploty a tlaku pomocí senzoru
 
 <img src="./images/blynk4.jpg" width="250" height="540"></img>
 
->V novém projektu klikneme na tlačíkto por přidání widgetů
+>V novém projektu klikneme na tlačíkto pro přidání widgetů
 
 <img src="./images/blynk6.jpg" width="250" height="540"></img>
 
@@ -36,11 +36,11 @@ ATOM matrix jsem použil pro měření pokojové teploty a tlaku pomocí senzoru
 
 <img src="./images/blynk7.jpg" width="250" height="540"></img>
 
->Po zvolení widgetu klineme na tlačítko pro úpravy 
+>Po zvolení widgetu klikneme na tlačítko pro úpravy 
 
 <img src="./images/blynk8.jpg" width="250" height="540"></img>
 
->Do grafu přídáme proměnné, které cheme aby se zobrazovaly
+>Do grafu přídáme proměnné, které chceme, aby se zobrazovaly
 
 <img src="./images/blynk9.jpg" width="250" height="540"></img>
 
@@ -48,7 +48,7 @@ ATOM matrix jsem použil pro měření pokojové teploty a tlaku pomocí senzoru
 
 <img src="./images/blynk10.jpg" width="250" height="540"></img>
 
->Klikneme na tlačítko pro přidělelní pinu
+>Klikneme na tlačítko pro přidělení pinu
 
 <img src="./images/blynk11.jpg" width="250" height="540"></img>
 
@@ -58,7 +58,7 @@ ATOM matrix jsem použil pro měření pokojové teploty a tlaku pomocí senzoru
 
 ### Arduino setup
 
->V Arduino IDE klikeneme na Soubor>Vlastnosti a  do políčka **Správce dalších URL** zkopírujeme tento odkaz: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json a klikneme na OK
+>V Arduino IDE klikneme na Soubor>Vlastnosti a  do políčka **Správce dalších desek URL** zkopírujeme tento odkaz: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json a klikneme na OK
 
 <img src="./images/Img.jpg"></img>
 
@@ -84,6 +84,8 @@ ATOM matrix jsem použil pro měření pokojové teploty a tlaku pomocí senzoru
 
 <img src="./images/Img6.jpg"></img>
 
+<img src="./images/Img10.jpg" width="250" height="333"></img>
+
 Teď už stačí Atom matrix pouze připojit k PC pomocí USB-C kabelu a v Arduino IDE v Nástroje>Port vybrat příslušné číslo portu. 
 
 Poté ze složky **Atom_Server** zkopírujeme kód, přepíšeme potřebné proměnné a nahrajeme ho na Atom Matrix.
@@ -94,6 +96,6 @@ Po nahrání kódu se v aplikaci Blynk začnou vykreslovat grafy
 
 <img src="./images/Img8.jpg" width="250" height="540"></img>
 
-Pro zobrazení webové stránky musíme do vyhledávání prohlížeče vložit IP adresu, kterou Atom Matrix získá po připojení k WiFi a vypíše ji na sériový monitor(v Arduino IDE v pravém horním rohu)
+Pro zobrazení webové stránky musíme do vyhledávání prohlížeče vložit IP adresu, kterou Atom Matrix získá po připojení k WiFi a vypíše ji na sériový monitor(v Arduino IDE v pravém horním rohu).
 
 <img src="./images/Img9.jpg"></img>
