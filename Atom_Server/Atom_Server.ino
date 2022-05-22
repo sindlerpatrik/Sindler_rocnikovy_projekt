@@ -14,7 +14,7 @@
 
 char ssid[] = "vase sit";                       //jméno sítě
 char pass[] = "heslo";                        //heslo sítě
-char token[] = "token";//token z Blynk aplikace
+char token[] = "token";//token z Blynk aplikace, který vám přijde na e-mail po registraci v aplikaci
 int reset = 0;
 
 Adafruit_BMP280 bmp;                              //pomocná proměnná pro senzor
