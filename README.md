@@ -61,3 +61,5 @@ ATOM matrix jsem použil pro měření pokojové teploty a tlaku pomocí senzoru
 >V Arduino IDE klikeneme na Soubor>Vlastnosti a  do políčka **Správce dalších URL** zkopírujeme tento odkaz: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json a klikneme na OK
 
 <img src="./images/Img.jpg"></img>
+
+>Poté, znovu v Arduino IDE klikneme na Nástroje>Vývojová deska>Manažér desek a vyhledáme a nainstalujeme desku **esp32**
