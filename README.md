@@ -86,4 +86,10 @@ ATOM matrix jsem použil pro měření pokojové teploty a tlaku pomocí senzoru
 
 Teď už stačí Atom matrix pouze připojit k PC pomocí USB-C kabelu a v Arduino IDE v Nástroje>Port vybrat příslušné číslo portu. 
 
-Poté ze složky **Atom_Server** zkopírujeme kód a nahrajeme ho na Atom Matrix.
+Poté ze složky **Atom_Server** zkopírujeme kód, přepíšeme potřebné proměnné a nahrajeme ho na Atom Matrix.
+
+<img src="./images/Img7.jpg"></img>
+
+Po nahrání kódu se v aplikaci Blynk začnou vykreslovat grafy
+
+Pro zobrazení webové stránky musíme do vyhledávání prohlížeče vložit IP adresu, kterou Atom Matrix získá po připojení k WiFi a vypíše ji na sériový monitor(v Arduino IDE v pravém horním rohu)
