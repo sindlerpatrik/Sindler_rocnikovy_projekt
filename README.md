@@ -72,6 +72,11 @@ ATOM matrix jsem použil pro měření pokojové teploty a tlaku pomocí senzoru
 
 >Pro instalaci potřebných knihoven klikneme na Nástroje>Spravovat knihovny a postupně nainstalujeme tyto knihovny:
 
-<img src="./images/Img3.jpg"></img>
-<img src="./images/Img4.jpg"></img>
-<img src="./images/Img5.jpg"></img>
+<img src="./images/Img3.JPG"></img>
+<img src="./images/Img4.JPG"></img>
+<img src="./images/Img5.JPG"></img>
+
+>Po této instalaci máme Arduino setup hotový
+
+### Zapojení BMP 280 k Atom Matrix
+
