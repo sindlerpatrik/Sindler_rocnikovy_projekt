@@ -80,3 +80,8 @@ ATOM matrix jsem použil pro měření pokojové teploty a tlaku pomocí senzoru
 
 ### Zapojení BMP 280 k Atom Matrix
 
+>Drátky mohou být zapojeny přímo do pinů Atom Matrix nebo na nepájivém poli
+
+<img src="./images/Img6.jpg"></img>
+
+Teď už stačí Atom matrix pouze připojit k PC pomocí USB-C kabelu a v Arduino IDE v Nástroje>Port vybrat příslušné číslo portu. 
