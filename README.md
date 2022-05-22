@@ -67,3 +67,8 @@ ATOM matrix jsem použil pro měření pokojové teploty a tlaku pomocí senzoru
 <img src="./images/Img1.jpg"></img>
 
 >Po nainstalování desky v Arduino IDE klikneme na Nástroje>Vývojová deska>ESP32 Arduino a zvolíme M5Stack-Atom
+
+<img src="./images/Img2.jpg"></img>
+
+>Pro instalaci potřebných knihoven klikneme na Nástroje>Spravovat knihovny a postupně nainstalujeme tyto knihovny:
+
