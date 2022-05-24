@@ -126,3 +126,8 @@ Pro usnadnění práce jsem v kódu nechal svůj API klíč, ale pokud chcete vl
 
 >V Arduino IDE klikneme na Nástroje>Spravovat knihovny a dostahujeme tyto postupně tyto knihovny
 
+<img src="./images/Img14.jpg"></img>
+<img src="./images/Img15.jpg"></img>
+
+>Po nainstalování knihoven ještě musíme v Nástroje>Vývojová deska: změnit desku na Core 2
+
