@@ -131,3 +131,4 @@ Pro usnadnění práce jsem v kódu nechal svůj API klíč, ale pokud chcete vl
 
 >Po nainstalování knihoven ještě musíme v Nástroje>Vývojová deska: změnit desku na Core 2
 
+<img src="./images/Img16.jpg"></img>
