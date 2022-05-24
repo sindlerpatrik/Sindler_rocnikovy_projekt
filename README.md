@@ -104,7 +104,7 @@ ATOM matrix jsem použil pro měření pokojové teploty a tlaku pomocí senzoru
 ## M5Stack Core 2
 Core 2 jsem použil pro zobrazení venkovní teploty v lokalitě, která se dá změnit v kódu. Pro získání teploty jsem použil API klíč ze stránky https://openweathermap.org/.
 
-Pro usnadnění práce jsem v kódu nechal svůj API klíč, ale pokud chcete vlastní, stačí se zaregristrovat na výše uvedené stránce.
+Pro usnadnění práce jsem v kódu nechal svůj API klíč, ale pokud chcete vlastní, stačí se zaregistrovat na výše uvedené stránce.
 
 ### Arduino setup
 
