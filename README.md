@@ -110,14 +110,18 @@ Pro usnadnění práce jsem v kódu nechal svůj API klíč, ale pokud chcete vl
 
 >Nejprve budeme muset stáhnout celý projekt na náš počítač v zip formátu
 
+<img src="./images/Img11.jpg"></img>
+
 >Poté bude zapotřebí stažený soubor rozbalit
+
+<img src="./images/Img12.jpg"></img>
 
 >V rozbalené složce poté klikenem na složku M5_Core2_json a v ní by se měly nacházet kód s fonty textu a ikonky
 
+<img src="./images/Img13.jpg"></img>
+
 >Pro zobrazení ikonek na displeji musíme složku ICONS přetáhnout na micro SD kartu, kterou poté vložíme do Core 2, bez SD karty program bude fungovat, ale bez ikonek
 
->Po přetažení složky ICONS na SD kartu můžeme otevřít soubor **M5_Core2_json.ino**
-
->Setup v Arduino IDE je skoro hotový díky předešlé části projektu, bude za potřebí pouze stáhnout potřebné knihovny
+>Po přetažení složky ICONS na SD kartu můžeme otevřít soubor **M5_Core2_json.ino**. Setup v Arduino IDE je skoro hotový díky předešlé části projektu, bude za potřebí pouze stáhnout potřebné knihovny
 
 >V Arduino IDE klikneme na Nástroje>Spravovat knihovny a dostahujeme tyto postupně tyto knihovny
