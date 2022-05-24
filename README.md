@@ -106,3 +106,6 @@ Core 2 jsem použil pro zobrazení venkovní teploty v lokalitě, která se dá 
 Pro usnadnění práce jsem v kódu nechal svůj API klíč, ale pokud chcete vlastní, stačí se zaregristrovat na výše uvedené stránce.
 
 ### Arduino setup
+
+>Nejprve budeme muset stáhnout celý projekt na náš počítač v zip formátu
+
