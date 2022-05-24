@@ -30,6 +30,7 @@ ATOM matrix jsem použil pro měření pokojové teploty a tlaku pomocí senzoru
 
 >V novém projektu klikneme na tlačíkto pro přidání widgetů
 
+>Po přetažení složky ICONS na SD kartu, můžeme otevřít soubor 
 <img src="./images/blynk6.jpg" width="250" height="540"></img>
 
 >Pro zobrazení hodnot pomocí grafu zvolíme SuperChat
@@ -86,17 +87,17 @@ ATOM matrix jsem použil pro měření pokojové teploty a tlaku pomocí senzoru
 
 <img src="./images/Img10.jpg" width="250" height="333"></img>
 
-Teď už stačí Atom matrix pouze připojit k PC pomocí USB-C kabelu a v Arduino IDE v Nástroje>Port vybrat příslušné číslo portu. 
+>Teď už stačí Atom matrix pouze připojit k PC pomocí USB-C kabelu a v Arduino IDE v Nástroje>Port vybrat příslušné číslo portu. 
 
-Poté ze složky **Atom_Server** zkopírujeme kód, přepíšeme potřebné proměnné a nahrajeme ho na Atom Matrix.
+>Poté ze složky **Atom_Server** zkopírujeme kód, přepíšeme potřebné proměnné a nahrajeme ho na Atom Matrix.
 
 <img src="./images/Img7.jpg"></img>
 
-Po nahrání kódu se v aplikaci Blynk začnou vykreslovat grafy
+>Po nahrání kódu se v aplikaci Blynk začnou vykreslovat grafy
 
 <img src="./images/Img8.jpg" width="250" height="540"></img>
 
-Pro zobrazení webové stránky musíme do vyhledávání prohlížeče vložit IP adresu, kterou Atom Matrix získá po připojení k WiFi a vypíše ji na sériový monitor(v Arduino IDE v pravém horním rohu).
+>Pro zobrazení webové stránky musíme do vyhledávání prohlížeče vložit IP adresu, kterou Atom Matrix získá po připojení k WiFi a vypíše ji na sériový monitor(v Arduino IDE v pravém horním rohu).
 
 <img src="./images/Img9.jpg"></img>
 
@@ -109,3 +110,14 @@ Pro usnadnění práce jsem v kódu nechal svůj API klíč, ale pokud chcete vl
 
 >Nejprve budeme muset stáhnout celý projekt na náš počítač v zip formátu
 
+>Poté bude zapotřebí stažený soubor rozbalit
+
+>V rozbalené složce poté klikenem na složku M5_Core2_json a v ní by se měly nacházet kód s fonty textu a ikonky
+
+>Pro zobrazení ikonek na displeji musíme složku ICONS přetáhnout na micro SD kartu, kterou poté vložíme do Core 2, bez SD karty program bude fungovat, ale bez ikonek
+
+>Po přetažení složky ICONS na SD kartu můžeme otevřít soubor **M5_Core2_json.ino**
+
+>Setup v Arduino IDE je skoro hotový díky předešlé části projektu, bude za potřebí pouze stáhnout potřebné knihovny
+
+>V Arduino IDE klikneme na Nástroje>Spravovat knihovny a dostahujeme tyto postupně tyto knihovny
