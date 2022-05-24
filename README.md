@@ -132,3 +132,5 @@ Pro usnadnění práce jsem v kódu nechal svůj API klíč, ale pokud chcete vl
 >Po nainstalování knihoven ještě musíme v Nástroje>Vývojová deska: změnit desku na Core 2
 
 <img src="./images/Img16.jpg"></img>
+
+>Teď už jen stačí v Nástroje>Port vybrat příslušné číslo portu a v kódu změnit potřebné proměnné a nahrát ho na Core2
