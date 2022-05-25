@@ -29,8 +29,7 @@ ATOM matrix jsem použil pro měření pokojové teploty a tlaku pomocí senzoru
 <img src="./images/blynk4.jpg" width="250" height="540"></img>
 
 >V novém projektu klikneme na tlačíkto pro přidání widgetů
-
->Po přetažení složky ICONS na SD kartu, můžeme otevřít soubor 
+ 
 <img src="./images/blynk6.jpg" width="250" height="540"></img>
 
 >Pro zobrazení hodnot pomocí grafu zvolíme SuperChat
@@ -141,3 +140,23 @@ Pro usnadnění práce jsem v kódu nechal svůj API klíč, ale pokud chcete vl
 >Pokud se Core 2 nepodaří připojit k WiFi(špatné heslo nebo název sítě nebo se nepodaří navázat spojení na poprvé), tak výsledek vypadá takto:
 
 ![](https://github.com/sindlerpatrik/sindler_rocnikovy_projekt/blob/main/images/gif2.gif)
+
+# Zdroje
+
+## M5 Stack Atom
+
+* http://educ8s.tv/esp32-web-server/
+* https://www.hackster.io/canghai/m5stack-with-blynk-dcbf7e
+* https://www.circuitschools.com/interfacing-bmp280-with-esp-32-on-i2c-with-errors-and-solutions/
+* https://docs.m5stack.com/en/arduino/arduino_development
+
+## M5 Stack Core 2
+
+* https://openweathermap.org/
+* https://www.youtube.com/watch?v=cgoCmYLeaSI
+* https://create.arduino.cc/projecthub/officine/getting-weather-data-655720?ref=similar&ref_id=37333&offset=3
+* https://github.com/m5stack/M5Stack/blob/master/examples/Advanced/Display/Free_Font_Demo/Free_Font_Demo.ino
+* https://github.com/m5stack/m5-docs/blob/master/docs/en/api/lcd.md
+* https://icons8.com/
+* https://www.youtube.com/watch?v=NYP_CxdYzLo&t
+* https://docs.m5stack.com/en/arduino/arduino_development
