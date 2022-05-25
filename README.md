@@ -134,3 +134,5 @@ Pro usnadnění práce jsem v kódu nechal svůj API klíč, ale pokud chcete vl
 <img src="./images/Img16.jpg"></img>
 
 >Teď už jen stačí v Nástroje>Port vybrat příslušné číslo portu a v kódu změnit potřebné proměnné a nahrát ho na Core2
+
+![](https://github.com/Your_Repository_Name/Your_GIF_Name.gif)
