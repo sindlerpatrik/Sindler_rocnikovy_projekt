@@ -135,4 +135,6 @@ Pro usnadnění práce jsem v kódu nechal svůj API klíč, ale pokud chcete vl
 
 >Teď už jen stačí v Nástroje>Port vybrat příslušné číslo portu a v kódu změnit potřebné proměnné a nahrát ho na Core2
 
+>Pokud jsme vše uděllai správně, tak výsledek vypaá takto
+
 ![](https://github.com/sindlerpatrik/sindler_rocnikovy_projekt/blob/main/images/gif1.gif)
