@@ -133,8 +133,11 @@ Pro usnadnění práce jsem v kódu nechal svůj API klíč, ale pokud chcete vl
 
 <img src="./images/Img16.jpg"></img>
 
->Teď už jen stačí v Nástroje>Port vybrat příslušné číslo portu a v kódu změnit potřebné proměnné a nahrát ho na Core2
-
->Pokud jsme vše uděllai správně, tak výsledek vypaá takto
+>Teď už jen stačí v Nástroje>Port vybrat příslušné číslo portu a v kódu změnit potřebné proměnné a nahrát ho na Core2.
+>Pokud jsme vše udělali správně, tak výsledek vypadá takto
 
 ![](https://github.com/sindlerpatrik/sindler_rocnikovy_projekt/blob/main/images/gif1.gif)
+
+>Pokud se Core 2 nepodaří připojit k WiFi(špatné heslo nebo název sítě nebo se nepodaří navázat spojení na poprvé), tak výsledek vypadá takto:
+
+![](https://github.com/sindlerpatrik/sindler_rocnikovy_projekt/blob/main/images/gif2.gif)
