@@ -115,7 +115,7 @@ Pro usnadnění práce jsem v kódu nechal svůj API klíč, ale pokud chcete vl
 
 <img src="./images/Img12.jpg"></img>
 
->V rozbalené složce poté klikenem na složku M5_Core2_json a v ní by se měly nacházet kód s fonty textu a ikonky
+>V rozbalené složce poté klikneme na složku M5_Core2_json a v ní by se měly nacházet kód s fonty textu a ikonky
 
 <img src="./images/Img13.jpg"></img>
 
@@ -123,7 +123,7 @@ Pro usnadnění práce jsem v kódu nechal svůj API klíč, ale pokud chcete vl
 
 >Po přetažení složky ICONS na SD kartu můžeme otevřít soubor **M5_Core2_json.ino**. Setup v Arduino IDE je skoro hotový díky předešlé části projektu, bude za potřebí pouze stáhnout potřebné knihovny
 
->V Arduino IDE klikneme na Nástroje>Spravovat knihovny a dostahujeme tyto postupně tyto knihovny
+>V Arduino IDE klikneme na Nástroje>Spravovat knihovny a dostahujeme postupně tyto knihovny
 
 <img src="./images/Img14.jpg"></img>
 <img src="./images/Img15.jpg"></img>
