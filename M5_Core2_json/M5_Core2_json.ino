@@ -3,29 +3,32 @@
 #include <M5Core2.h>
 #include <ArduinoJson.h>
 #include "fonts.h"
+#include "time.h"
 
 //definování proměnných
-#define timeout 10000         //timeout 10s 
+#define timeout 20000         //timeout 20s 
 
-char ssid[] = "vase sit";   //jméno sítě
-char pass[] = "heslo";      //heslo sítě
-char server[] = "api.openweathermap.org";//server pro sbírání dat
-char apiKey[] = "88338ec27e1c8ca89107de0bc0c4e561";//api klíč
-char *icons[] = {"/ICONS/clear.jpg", "/ICONS/clouds.jpg", "/ICONS/rain.jpg",
+const char ssid[] = "SSID";   //jméno sítě
+const char pass[] = "password";      //heslo sítě
+const char server[] = "api.openweathermap.org";//server pro sbírání dat
+const char apiKey[] = "88338ec27e1c8ca89107de0bc0c4e561";//api klíč
+const char ntpServer[] = "pool.ntp.org";
+const char *icons[] = {"/ICONS/clear.jpg", "/ICONS/clouds.jpg", "/ICONS/rain.jpg",
                  "/ICONS/thunderstorm.jpg", "/ICONS/snow.jpg", "/ICONS/mist.jpg"//denní ikonky
                 };
-char *iconsNight[] = {"/ICONS/clear_night.jpg", "/ICONS/clouds_night.jpg",
-                      "/ICONS/thunderstorm_night.jpg", "/ICONS/snow_night.jpg",
-                      "/ICONS/mist_night.jpg" //noční ikonky
+const char *iconsNight[] = {"/ICONSNIGHT/clear_night.jpg", "/ICONSNIGHT/clouds_night.jpg",
+                      "/ICONSNIGHT/thunderstorm_night.jpg", "/ICONSNIGHT/snow_night.jpg",
+                      "/ICONSNIGHT/mist_night.jpg" //noční ikonky
                      };
-String location = "mesto,CZ";//lokace, např.: prague,CZ, warsaw,PL, bratislava,SK atd.
-int reset = 0;
-int posX = 120;                //pozice ikonek
-int posY = 80;
-RTC_TimeTypeDef RTCtime;      //pomocné proměnné pro čas a datum
-RTC_DateTypeDef RTCDate;
+const String location = "city, country";//lokace, např.: prague,CZ, warsaw,PL, bratislava,SK atd.
+const int gmtOffset_sec = 3600;
+const int daylightOffset_sec = 3600;
+byte reset = 0;
+const byte posX = 125;                //pozice ikonek
+const byte posY = 80;
 char timeBuff[10];            //buffery pro datum a čas
 char dateBuff[20];
+char timeHour[4];
 
 WiFiClient client;//pomocná proměnná client
 
@@ -67,27 +70,28 @@ void doConnect() {
 
 //******************************************************************
 
-void setupTime() {
-  M5.Rtc.GetTime(&RTCtime);//získání času při setupu
-  M5.Rtc.GetDate(&RTCDate);
+void ntpTime(){
+  struct tm timeinfo;
+  if(!getLocalTime(&timeinfo)){
+    Serial.println("Failed to obtain time");
+  }
+  char timeMinute[3], year[5], month[5], day[4];
+  
+  strftime(timeHour,4, "%H:", &timeinfo);
+  strftime(timeMinute,3, "%M", &timeinfo);
+  strftime(year,5, "%Y", &timeinfo);
+  strftime(month,5, "%b/", &timeinfo);
+  strftime(day,4, "%d/", &timeinfo);
+  
+  M5.Lcd.setTextDatum(TR_DATUM);
+  M5.Lcd.drawString(year, 315, 0, 2);
+  M5.Lcd.drawString(month, 250, 0, 2);
+  M5.Lcd.drawString(day, 190, 0, 2);
+  
+  M5.Lcd.setTextDatum(TL_DATUM);
+  M5.Lcd.drawString(timeHour, 5, 0, 2);
+  M5.Lcd.drawString(timeMinute, 45, 0, 2);
 }
-
-//******************************************************************
-
-void timeDate() {
-  M5.Rtc.GetTime(&RTCtime);//získání aktuálního času a data
-  M5.Rtc.GetDate(&RTCDate);
-
-  sprintf(timeBuff, "%02d:%02d", RTCtime.Hours, RTCtime.Minutes);//uložení hodin a minut do bufferu
-  M5.Lcd.setTextDatum(TL_DATUM);                                 //text vlevo nahoře
-  M5.Lcd.drawString(timeBuff, 5, 0, 2);                          //zobrazení času
-
-  sprintf(dateBuff, "%02d/%02d/%d", RTCDate.Date, RTCDate.Month, RTCDate.Year);//uložení data, měsíce a roku do bufferu
-  M5.Lcd.setTextDatum(TR_DATUM);                                               //text vpravo nahoře
-  M5.Lcd.drawString(dateBuff, 315, 0, 2);                                      //zobrazení data a roku
-}
-
-//******************************************************************
 
 void connection() {
   M5.Lcd.setTextDatum(BL_DATUM);             //text vlevo dole
@@ -154,8 +158,12 @@ void getWeather() {
 
     M5.Lcd.clear(WHITE);
 
+    ntpTime();
+
+    int Hours = atoi(timeHour);
+
     if (condition == "Clear") {                           //zobrazení ikonek podle condition
-      if (RTCtime.Hours >= 21 || RTCtime.Hours <= 4) {    //pokud je hodnota z hodin větší než 21 nebo menší než 4,
+      if (Hours >= 21 || Hours <= 4) {    //pokud je hodnota z hodin větší než 21 nebo menší než 4,
         M5.Lcd.drawJpgFile(SD, iconsNight[0], posX, posY);//z SD karty se načte noční ikonka odpovídající condition
       }
       else {
@@ -163,7 +171,7 @@ void getWeather() {
       }
     }
     else if (condition == "Clouds") {
-      if (RTCtime.Hours >= 21 || RTCtime.Hours <= 4) {
+      if (Hours >= 21 || Hours <= 4) {
         M5.Lcd.drawJpgFile(SD, iconsNight[1], posX, posY);
       }
       else {
@@ -171,7 +179,7 @@ void getWeather() {
       }
     }
     else if (condition == "Thunderstorm") {
-      if (RTCtime.Hours >= 21 || RTCtime.Hours <= 4) {
+      if (Hours >= 21 || Hours <= 4) {
         M5.Lcd.drawJpgFile(SD, iconsNight[2], posX, posY);
       }
       else {
@@ -179,7 +187,7 @@ void getWeather() {
       }
     }
     else if (condition == "Snow") {
-      if (RTCtime.Hours >= 21 || RTCtime.Hours <= 4) {
+      if (Hours >= 21 || Hours <= 4) {
         M5.Lcd.drawJpgFile(SD, iconsNight[3], posX, posY);
       }
       else {
@@ -187,7 +195,7 @@ void getWeather() {
       }
     }
     else if (condition == "Mist") {
-      if (RTCtime.Hours >= 21 || RTCtime.Hours <= 4) {
+      if (Hours >= 21 || Hours <= 4) {
         M5.Lcd.drawJpgFile(SD, iconsNight[4], posX, posY);
       }
       else {
@@ -204,7 +212,21 @@ void getWeather() {
     M5.Lcd.drawString("Wind: " + wind + "km/h", 160, 80, 2);//zobrazení rychlosti větru v km/h
 
     M5.Lcd.setTextDatum(MR_DATUM);                          //text vpravo uprostřed
-    M5.Lcd.drawString(temp + "C", 315, 120, 1);             //zobrazení teploty
+    if (temp.toInt() < 0) {
+      M5.Lcd.setTextColor(RED);
+      M5.Lcd.drawString(temp + "C", 315, 120, 2);
+      }
+    
+    else if (temp.toInt() > 0) {
+      M5.Lcd.setTextColor(BLUE);
+      M5.Lcd.drawString(temp + "C", 315, 120, 2);
+      }
+
+    else{
+      M5.Lcd.drawString(temp + "C", 315, 120, 2);
+      }
+
+    M5.Lcd.setTextColor(BLACK);
 
     M5.Lcd.setTextDatum(ML_DATUM);                          //text vlevo uprostřed
     M5.Lcd.drawString("Hum: " + humidity + "%", 5, 120, 2); //zobrazení vlhkosti v %
@@ -213,8 +235,7 @@ void getWeather() {
     M5.Lcd.drawLine(5, 205, 315, 205, BLACK);               //zobrazení rozdělovací čáry dole
 
     connection();                                           //přivolání předešlých funkcí
-    timeDate();
-    delay(20000);                                           //celý displej se aktualizuje každých 20 sekund
+    delay(10000);                                           //celý displej se aktualizuje každých 20 sekund
   }
 }
 
@@ -222,8 +243,8 @@ void getWeather() {
 
 void setup() {
   //přivolání funkcí pro setup
+  configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
   doConnect();
-  setupTime();
 }
 
 //******************************************************************
